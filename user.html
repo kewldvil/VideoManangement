@@ -1,0 +1,315 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KHMERTUBE</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/AdminLTE.min.css">
+    <link rel="stylesheet" href="css/formValidation.min.css">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="visibility:hidden">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <span id="play">PLAY</span><span id="me">ME</span>
+                </a>
+                <a href="#" class="navbar-brand" id="menuIcon">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true">
+                  </a>
+    </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Action</a>
+                    </li>
+                    <li><a href="#">Another action</a>
+                    </li>
+                    <li><a href="#">Something else here</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a>
+                    </li>
+                </ul>
+                </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!-- End navigation bar -->
+    <!-- Offcanvas Menu -->
+    <div id="offCanvasMenu">
+        <div class="list-group">
+            <a href="#" class="list-group-item">
+                <div class="addCircle"></div>
+                <span class="glyphicon glyphicon-dashboard"></span>
+                <span class="menuTitle">Dashboard</span>
+            </a>
+            <a href="#" class="list-group-item">
+                <div class="addCircle"></div>
+                <span class="glyphicon glyphicon-comment"></span>
+                <span class="menuTitle">Comment</span>
+            </a>
+            <a href="#" class="list-group-item">
+                <div class="addCircle"></div>
+                <span class="glyphicon glyphicon-user"></span>
+                <span class="menuTitle">User</span>
+            </a>
+            <a href="#" class="list-group-item">
+                <div class="addCircle"></div>
+                <span class="glyphicon glyphicon-facetime-video"></span>
+                <span class="menuTitle">Videos</span>
+            </a>
+        </div>
+    </div>
+    <!-- Offcanvas Menu -->
+    <div id="contentWrapper">
+        <!--        <div class="container-fluid">-->
+        <section class="content-header">
+            <h1>
+            Dashboard
+            <small>Control panel</small>
+          </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a>
+                </li>
+                <li class="active">Dashboard</li>
+            </ol>
+        </section>
+        <!-- box  -->
+        <button data-toggle="modal" data-target="#newUser" class="btn btn-success pull-right" style="margin-bottom:5px">New User</button>
+        <!-- user section       -->
+        <table class="table table-striped table-bordered table-responsive" id="userTable">
+            <thead class="bg-red">
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                    <th>Status</th>
+                    <th>Funtion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- load from jQuery -->
+            </tbody>
+        </table>
+        <!--   user section      -->
+        <!-- new user modal -->
+        <div class="modal fade" id="newUser">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header bg-red">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal title</h4>
+                    </div>
+                    <form class="form-horizontal" id="userFrm">
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">First Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="firstName" id="firstName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Last Name</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="lastName" id="lastName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Username</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="username" id="username">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Password</label>
+                                <div class="col-sm-9">
+                                    <input type="password" class="form-control" name="password" id="password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Status</label>
+                                <div class="col-sm-9">
+                                    <select name="status" class="form-control">
+                                        <option value="1">Active</option>
+                                        <option value="0">Inactive</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary" value="Save">
+                        </div>
+                    </form>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+        <!-- new user modal -->
+    </div>
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/formValidation.min.js"></script>
+    <script src="js/fv-js/bootstrap.min.js"></script>
+    <script>
+    var content = (window.innerWidth - 240);
+    $('#offCanvasMenu').hover(function() {
+        $(this).css('width', '240px');
+        $('.rightMenuiTem').show('1000');
+    }, function() {
+        $(this).css('width', '64px');
+        $('.rightMenuiTem').hide('1000');
+        $('#contentWrapper').css('left', '0px');
+        $('#contentWrapper').css('width', (content + 176) + 'px');
+    });
+    var status = "hide";
+    $('#menuIcon').click(function() {
+        if (window.innerWidth <= 768) {
+            if (status == "hide") {
+                $('#offCanvasMenu').css('width', '240px');
+                status = "show";
+            } else {
+                $('#offCanvasMenu').css('width', '0px');
+                status = "hide";
+            }
+        } else {
+            if (status == "hide") {
+                $('#offCanvasMenu').css('width', '240px');
+                $('#contentWrapper').css('left', '176px');
+                $('#contentWrapper').css('width', content + 'px');
+                status = "show";
+            } else {
+                $('#offCanvasMenu').css('width', '64px');
+                $('#contentWrapper').css('left', '0px');
+                $('#contentWrapper').css('width', (content + 176) + 'px');
+                status = "hide";
+            }
+        }
+    });
+    $('a.list-group-item').click(function() {
+        $('.addCircle').removeClass('circle');
+        $('.list-group-item > .glyphicon').css('color', 'rgba(255, 255, 255, 0.5)');
+        $(this).children('div').addClass('circle');
+        $(this).children('.glyphicon').css('color', '#0aa89e');
+    });
+    //  add 10 table row
+    for (var i = 1; i <= 10; i++) {
+        var imageURL = 'active.png';
+        if ((i % 2) == 0) imageURL = 'inactive.png';
+        $('#userTable > tbody:last-child').append("<tr align='center'><th>" + i + "</th><td>Phnom Penh</td><td>Group 04</td><td>ppg04</td><td ><img src='images/" + imageURL + "' width='25px' height='25px'></td><td><a href='#'data-toggle='modal' data-target='#newUser'><img src='images/edit.png' width='25px' height='25px'></a></td></tr>");
+    }
+    $('#userFrm').formValidation({
+        framework: 'bootstrap',
+        icon: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+            firstName: {
+                validators: {
+                    notEmpty: {
+                        message: 'The first name can not be empty'
+
+                    }
+                }
+            },
+            lastName: {
+                validators: {
+                    notEmpty: {
+                        message: 'The last name can not be empty'
+
+                    }
+                }
+            },
+            username: {
+                validators: {
+                    notEmpty: {
+                        message: 'The username can not be empty'
+
+                    }
+                }
+            },
+            password: {
+                validators: {
+                    notEmpty: {
+                        message: 'The password can not be empty'
+
+                    },
+                    callback: {
+                        message: 'The password is not valid',
+                        callback: function(value, validator, $field) {
+                            if (value === '') {
+                                return true;
+                            }
+
+                            // Check the password strength
+                            if (value.length < 8) {
+                                return {
+                                    valid: false,
+                                    message: 'It must be more than 8 characters long'
+                                };
+                            }
+
+                            // The password doesn't contain any uppercase character
+                            if (value === value.toLowerCase()) {
+                                return {
+                                    valid: false,
+                                    message: 'It must contain at least one upper case character'
+                                }
+                            }
+
+                            // The password doesn't contain any uppercase character
+                            if (value === value.toUpperCase()) {
+                                return {
+                                    valid: false,
+                                    message: 'It must contain at least one lower case character'
+                                }
+                            }
+
+                            // The password doesn't contain any digit
+                            if (value.search(/[0-9]/) < 0) {
+                                return {
+                                    valid: false,
+                                    message: 'It must contain at least one digit'
+                                }
+                            }
+
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

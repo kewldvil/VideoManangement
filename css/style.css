@@ -1,0 +1,186 @@
+body {
+    background: #e5e6e6 !important;
+}
+
+.navbar {
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.33);
+    min-height: 64px;
+}
+
+.navbar-default {
+    background-color: #ffffff;
+    border-color: transparent;
+}
+
+.navbar-nav > li > a {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.navbar-brand {
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+
+.navbar-toggle {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#offCanvasMenu {
+    z-index: 1004;
+    top: 64px;
+    position: fixed;
+    overflow: hidden;
+    background-color: #2b323a;
+    width: 64px;
+    height: 100%;
+    transition: width 0.7s ease;
+}
+
+.list-group-item > .glyphicon {
+    font-size: 25px;
+}
+
+.modal-open #wrap {
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: transparent;
+    padding: 15px 23px;
+}
+
+#offCanvasMenu > ul > li >a {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#play {
+    font-weight: 700;
+    font-size: 125%;
+    color: #0aa89e;
+}
+
+#me {
+    font-weight: 700;
+    font-size: 125%;
+    color: #D91E18;
+}
+
+.list-group {
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 0;
+}
+
+.list-group-item {
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 0px;
+}
+
+a.list-group-item:focus {
+    background-color: transparent;
+}
+
+.menuTitle {
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.small-box .icon {
+    top: 0px !important;
+}
+
+a.list-group-item:hover {
+    background-color: black;
+    color: white;
+}
+
+.list-group-item:first-child {
+    border-radius: 0px;
+}
+
+.btn {
+    border-radius: 0px !important;
+}
+
+.circle {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 999px;
+}
+
+#contentWrapper {
+    position: relative;
+    left: 0px;
+    margin-top: 70px;
+    margin-left: 64px;
+    padding-left: 15px;
+    padding-right: 15px;
+    transition: all 0.7s ease;
+}
+
+@media screen and (max-width: 767px) {
+    #offCanvasMenu {
+        width: 0px;
+    }
+    #contentWrapper {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .content-header {
+        margin-top: 65px;
+        margin-bottom: 10px;
+    }
+}
+
+.content-header {
+    padding: 0px !important;
+}
+
+.content-header > a > h1 {
+    font-size: 25px !important;
+}
+
+.content-header >.breadcrumb {
+    top: 0px !important;
+}
+
+div.modal-dialog {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+div.modal-content {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.modal {
+    /*! adjust transition time */
+    -webkit-transition: all ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -o-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
+}
+.modal.in .modal-dialog {
+    /*! editthis transform to any transform you want */
+    -webkit-transform: scale(1.1, 1.1) !important;
+    -ms-transform: scale(1.1, 1.1) !important;
+    transform: scale(1.1, 1.1) !important;
+}
+.modal.fade .modal-dialog {
+    /*! disable sliding from left/right/top/bottom */
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
