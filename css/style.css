@@ -156,13 +156,11 @@ a.list-group-item:hover {
     top: 0px !important;
 }
 
-div.modal-dialog {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
 div.modal-content {
     -webkit-box-shadow: none;
+    -o-box-shadow:none;
+    -ms-box-shadow:none;
+    -moz-box-shadow:none;
     box-shadow: none;
 }
 .modal {
@@ -183,4 +181,7 @@ div.modal-content {
     -webkit-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
+}
+th,td{
+    text-align: center;
 }
