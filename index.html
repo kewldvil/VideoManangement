@@ -170,7 +170,6 @@
             <!-- ./col -->
         </div>
         <!-- /.row -->
-        
         <!-- second row -->
         <div class="row">
             <div class="col-lg-3 col-xs-6">
@@ -246,6 +245,10 @@
         });
         // load page comment 
         $('#btnComment, #menuComment').click(function(e) {
+            $('.addCircle').removeClass('circle');
+            $('.list-group-item > .glyphicon').css('color', 'rgba(255, 255, 255, 0.5)');
+            $('a[id="menuComment"]').children('div').addClass('circle');
+            $('a[id="menuComment"]').children('.glyphicon').css('color', '#0aa89e');
             $('#contentWrapper').load('pages/comment.html', function() {
                 //  add 10 table row
                 for (var i = 1; i <= 100; i++) {
