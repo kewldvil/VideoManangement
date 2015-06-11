@@ -201,3 +201,6 @@ th,td{
   text-align: left;
   vertical-align: middle;
 }
+.content-header {
+    margin-bottom: 10px;
+}
