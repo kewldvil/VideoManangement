@@ -204,7 +204,7 @@
 
 
         //  menu on hover
-        var content = (window.innerWidth - 240);
+
         var test = $('#offCanvasMenu').width();
         $('#offCanvasMenu').hover(function() {
                 if (test == 64) {
@@ -220,7 +220,7 @@
             });
         var status = "hide";
         $('#menuIcon').click(function() {
-            if (window.innerWidth <= 768) {
+            if ($('#contentWrapper').width() <= 768) {
                 if (status == "hide") {
                     $('#offCanvasMenu').css('width', '240px');
                     status = "show";
@@ -232,13 +232,12 @@
                 if (status == "hide") {
                     $('#offCanvasMenu').css('width', '240px');
                     $('#contentWrapper').css('left', '176px');
-                    $('#contentWrapper').css('width', content + 'px');
+                    $('#contentWrapper').css('margin-right', '176px');
                     status = "show";
                 } else {
-                    //                    $('#offCanvasMenu').unbind('mouseenter').unbind('mouseleave');
                     $('#offCanvasMenu').css('width', '64px');
                     $('#contentWrapper').css('left', '0px');
-                    $('#contentWrapper').css('width', (content + 176) + 'px');
+                    $('#contentWrapper').css('margin-right', '0px');
                     status = "hide";
                 }
             }
@@ -254,10 +253,10 @@
                 for (var i = 1; i <= 100; i++) {
                     var imageURL = 'active.png';
                     if ((i % 2) == 0) imageURL = 'inactive.png';
-                    $('#userTable > tbody:last-child').append("<tr align='center'><td>" + i + "</td><td>Phnom Penh" + i + "</td><td>Group 04</td><td>ppg04</td><td ><img src='images/" + imageURL + "' width='25px' height='25px'></td><td><a href='#'data-toggle='modal' data-target='#newUser'  class='editUser'><img src='images/edit.png' width='25px' height='25px' ></a></td></tr>");
+                    $('#commentTable > tbody:last-child').append("<tr align='center'><td>" + i + "</td><td>fhjksjfhs" + i + "</td><td>Group 04</td><td>ppg04</td><td ><img src='images/" + imageURL + "' width='25px' height='25px'></td><td><a href='#'data-toggle='modal' data-target='#newComment'  class='editComment'><img src='images/edit.png' width='25px' height='25px' ></a></td></tr>");
                 }
                 // edit user 
-                $('.editUser').click(function(e) {
+                $('.editComment').click(function(e) {
                     //  remove validate glyphicon
                     $('.modal div').removeClass('has-error');
                     $('.modal div').removeClass('has-success');
@@ -265,24 +264,25 @@
                     $('.modal i').removeClass('glyphicon-remove');
                     $('.modal small').removeClass('help-block');
                     // e.preventDefault();
-                    var tr = $('#userTable  tr:hover');
-                    var id = tr.find("td").eq(0).text();
-                    var firstName = tr.find("td").eq(1).text();
-                    var lastName = tr.find("td").eq(2).text();
-                    var username = tr.find("td").eq(3).text();
+                    var tr = $('#commentTable  tr:hover');
+                    // var id = tr.find("td").eq(0).text();
+                    // var firstName = tr.find("td").eq(1).text();
+                    // var lastName = tr.find("td").eq(2).text();
+                    var comment = tr.find("td").eq(1).text();
                     var status = tr.find("td").eq(4).find("img").attr("src");
                     status = (status == "images/active.png") ? 1 : 0;
 
                     // hide password
-                    $('#passwordForm').css('display', 'none');
+                    // $('#passwordForm').css('display', 'none');
 
-                    $('#firstName').val(firstName);
-                    $('#lastName').val(lastName);
-                    $('#username').val(username);
+                    // $('#firstName').val(firstName);
+                    // $('#lastName').val(lastName);
+                    // $('#username').val(username);
+                    $('#txtComment').val(comment);
                     $('#status').val(status);
                 });
-                // validate user form 
-                $('#userFrm').formValidation({
+                // validate comment form 
+                $('#commentFrm').formValidation({
                     framework: 'bootstrap',
                     icon: {
                         valid: 'glyphicon glyphicon-ok',
@@ -367,7 +367,7 @@
                     }
                 });
                 // clear text box
-                $('#btnNewUser').click(function(e) {
+                $('#btnNewComment').click(function(e) {
                     //  remove validate glyphicon
                     $('.modal div').removeClass('has-error');
                     $('.modal div').removeClass('has-success');
@@ -384,6 +384,7 @@
 
                 // search pagination
                 $('#userTable').DataTable();
+                $('#commentTable').DataTable();
             });
 
         });
@@ -513,12 +514,14 @@
                 });
                 // clear text box
                 $('#btnNewUser').click(function(e) {
+                    $('#userForm').formValidation('revalidateField');
                     //  remove validate glyphicon
                     $('.modal div').removeClass('has-error');
                     $('.modal div').removeClass('has-success');
                     $('.modal i').removeClass('glyphicon-ok');
                     $('.modal i').removeClass('glyphicon-remove');
                     $('.modal small').removeClass('help-block');
+
 
                     $('#passwordForm').css('display', 'block');
                     $('#firstName').val("");
