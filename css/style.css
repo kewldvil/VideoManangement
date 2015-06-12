@@ -127,6 +127,7 @@ a.list-group-item:hover {
     margin-left: 64px;
     padding-left: 15px;
     padding-right: 15px;
+    overflow: hidden;
     transition: all 0.7s ease;
 }
 
@@ -139,13 +140,18 @@ a.list-group-item:hover {
         margin-left: 0px;
     }
     .content-header {
-        margin-top: 65px;
+        margin-top: 70px;
         margin-bottom: 10px;
     }
 }
-
+#videoTable th{
+    font-size: 12px;
+}
 .content-header {
-    padding: 0px !important;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 2px gray;
+
 }
 
 .content-header > a > h1 {
