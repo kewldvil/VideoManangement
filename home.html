@@ -12,7 +12,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/formValidation.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 </head>
 
 <body>
@@ -197,7 +197,7 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/formValidation.min.js"></script>
     <script src="js/fv-js/bootstrap.min.js"></script>
-    <!--<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>-->
+    <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
     <script>
     $(document).ready(function() {
         // hide header on mobile
@@ -207,15 +207,15 @@
         $('a[href$="home.html"]').children('div').addClass('circle');
         $('a[href$="home.html"]').children('.glyphicon').css('color', '#0aa89e');
 
-        if ($('#contentWrapper').width() <= 768) {
-            $('.content-header').css({
+            if ($('#contentWrapper').width() <= 768) {
+                $('.content-header').css({
+                    'padding': '0',
+                    'backgroun-color': '',
+                    'box-shadow': '',
+                });
+                $('.content-header h1').remove();
+            }
 
-                'padding': '0',
-                'backgroun-color': '',
-                'box-shadow': '',
-            });
-            $('.content-header h1').remove();
-        }
         //  menu on hover
 
         var test = $('#offCanvasMenu').width();
